@@ -1,0 +1,271 @@
+
+@font-face {
+  font-family: OpenSans;
+  src: url(./7b297dc61c31074c8502.woff);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(./c5ade4e215340f730e56.woff);
+  font-weight: 700;
+}
+
+body {
+  font-family: OpenSans, sans-serif; 
+  margin: 0px;
+}
+
+* {
+  /*сбрасываем дефолтные стили броузера*/
+  list-style-type: none;
+  padding-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+p {
+  margin-top: 10px;
+}
+
+.main_plus_aside {
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px; 
+  padding: 0px 15px; 
+  box-sizing: border-box; 
+}
+
+.main {
+  flex: 1;
+  margin-left: 0;
+  margin-right: 100px; 
+  margin-top: 0px;
+  padding: 15px;
+}
+
+/* ###свойства поста в главном блоке### */
+.post_main {
+  margin-bottom: 15px; 
+  padding-bottom: 25px; 
+  min-height: 100px;
+}
+.post_main_pic {
+  /*картинка поста в гл.блоке*/
+  flex: none;
+}
+.post-img {
+  max-width: 380px;
+  width: 100%;
+  object-fit: contain;
+}
+.post_main_textblock {
+  /*текстовая часть поста в гл.блоке*/
+  padding-left: 10px;
+  font-size: 15px; 
+  margin-left: 20px; 
+}
+
+.post-main-tegs li {
+  display: inline-block;
+}
+.post-main-tegs a {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #b59f5b;
+  margin-bottom: 10px;
+}
+.post-main-tegs a:hover {
+  text-decoration: underline;
+}
+.post-main-head {
+  color: black;
+  font-size: 20px;
+  text-transform: uppercase; 
+  margin-bottom: 30px;
+  max-width: 330px;
+}
+.post-main-head:hover {
+  color: #b59f5b;
+}
+.post-main-date_author {
+  display: flex;
+  margin-bottom: 50px;
+}
+.post-main-date {
+  font-size: 12px;
+  color: #888888;
+}
+.post-main-author {
+  font-size: 12px;
+  font-weight: bold;
+  color: black;
+  margin-left: 15px; 
+}
+.post-main-content {
+  font-size: 15px;
+  line-height: 22px;
+  color: black;
+}
+
+.display_none {
+  display: none;
+}
+
+.display_flex {
+  display: flex;
+}
+
+.visually-hidden {
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+}
+
+.placeholder {
+  background-color: rgba(0, 0, 0, 0.3);
+  max-width: 380px;
+  width: 100%;
+  height: 200px;
+  display: block;
+}
+
+/* ### ФОРМА POPUP "Перезагрузи страницу" ### */
+.popup-wrapper {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.2);
+	display: _flex;
+	z-index: 999; 
+}
+.popup {
+	width: 388px;
+	height: 200px;
+	margin: auto;
+	background-color: white;
+	z-index: 3;
+	padding-top: 40px;
+	position: relative;
+}
+
+.popup-title {
+  text-align: center;
+  margin: auto;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+}
+
+.popup-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: #b59f5b;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  opacity: 0.3;
+}
+
+.popup_form {
+	display: flex;
+	flex-direction: column;
+	padding: 30px 30px 30px;
+	justify-content: space-between;
+	height: 90%;
+  
+}
+
+.popup-form-group {
+	font-size: 13px;
+}
+
+/* ==================================================================================== */
+@media (min-width: 641px) and (max-width: 1200px) { /* стили для планшета */
+	.main_plus_aside {
+		margin-top: 50px; 
+	}
+	.post_main {
+		flex-wrap: wrap;
+		border-bottom: 3px solid rgba(0, 0, 0, 0.05);
+		margin-left: 15px; /* добавляем отступ, чтобы соответствовать планшетному макету*/
+		margin-right: 15px; /* добавляем отступ, чтобы соответствовать планшетному макету при разрешениях менее 740*/
+	}
+	.post_main_pic {
+		flex: initial; /* убираем flex:none чтобы боковая панель не "налезала" на картинку при оч.маленьких разрешениях экрана */
+	}
+	.post_main_textblock {
+		padding-left: 0px;
+		margin-left: 0px; 
+	}
+	.main {
+		margin-right: 0px; 
+		margin-top: 0px;
+		padding: 0px;
+	}	
+	
+}
+/*================================================================*/
+
+@media (max-width: 640px) { /* стили для телефонов */
+	.main_plus_aside {
+		max-width: 640px;
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: auto; 
+		padding: 0px; 
+		box-sizing: border-box; 
+	}
+	.main_plus_aside {
+		margin-top: 40px; 
+		
+	}
+	.post_main {
+		flex-wrap: wrap;
+		margin-bottom: 35px;
+		border-bottom: 5px solid rgba(0, 0, 0, 0.05);
+	}
+	.post_main_pic {/*картинка поста в гл.блоке*/
+		margin: auto; 
+		padding: 0px;
+		flex: initial; 
+	}
+	.post-img {
+		width: 100%; 
+	}
+	.post-main-head {
+		font-size: 16px;
+	}
+	.post_main_textblock {
+		padding-left: 0px;
+		margin-left: 0px; 
+	}
+	.main {
+		margin: auto; 
+		width: 100%;
+		padding: 0px 15px; 
+	}
+	
+}
+	
+/*================================================================*/
